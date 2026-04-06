@@ -1,25 +1,25 @@
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import CredibilityBar from './components/CredibilityBar';
-import Services from './components/Services';
-import Work from './components/Work';
-import HowItWorks from './components/HowItWorks';
-import SocialProof from './components/SocialProof';
-import Pricing from './components/Pricing';
-import About from './components/About';
-import FinalCTA from './components/FinalCTA';
-import Footer from './components/Footer';
-import CustomCursor from './components/CustomCursor';
+"use client";
+
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import CredibilityBar from "./components/CredibilityBar";
+import Services from "./components/Services";
+import Work from "./components/Work";
+import HowItWorks from "./components/HowItWorks";
+import SocialProof from "./components/SocialProof";
+import Pricing from "./components/Pricing";
+import About from "./components/About";
+import FinalCTA from "./components/FinalCTA";
+import Footer from "./components/Footer";
+import CustomCursor from "./components/CustomCursor";
 
 export default function App() {
   return (
-    <div className="relative min-h-screen bg-background selection:bg-agency-accent selection:text-background overflow-x-hidden">
+    <div className="relative min-h-screen overflow-x-hidden bg-background selection:bg-agency-accent selection:text-background">
       <div className="noise-overlay" />
       <CustomCursor />
-      
       <CredibilityBar />
       <Navbar />
-      
       <main>
         <Hero />
         <Work />
@@ -30,10 +30,7 @@ export default function App() {
         <About />
         <FinalCTA />
       </main>
-      
       <Footer />
     </div>
   );
 }
-
-

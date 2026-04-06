@@ -1,5 +1,6 @@
-import { motion } from 'motion/react';
-import { Logo } from './Logo';
+import Image from "next/image";
+import { motion } from "motion/react";
+import { Logo } from "./Logo";
 
 export default function About() {
   return (
@@ -38,13 +39,16 @@ export default function About() {
             className="relative group"
           >
             <div className="aspect-square bg-card border border-agency-border group-hover:border-agency-accent/40 transition-colors duration-500 relative overflow-hidden">
-               <img 
-                src="https://picsum.photos/seed/agency/800/800" 
-                alt="Blackstride Precision" 
-                className="w-full h-full object-cover opacity-40 grayscale"
-                referrerPolicy="no-referrer"
-               />
-               <div className="absolute inset-0 bg-linear-to-t from-background via-transparent to-transparent"></div>
+               <div className="absolute inset-0 bg-white">
+                 <Image
+                  src="/branding/blackstride-logo-stacked-light.png"
+                  alt="Blackstride Digital brand mark"
+                  fill
+                  className="object-contain p-10 sm:p-14"
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                 />
+               </div>
+               <div className="absolute inset-0 bg-linear-to-t from-background/70 via-transparent to-transparent"></div>
                
                <div className="absolute bottom-10 left-10 right-10">
                   <div className="flex items-center gap-4 mb-4">

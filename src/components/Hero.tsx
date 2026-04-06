@@ -6,8 +6,8 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden">
       {/* Background Watermark */}
-      <div className="absolute top-1/2 right-[-5%] -translate-y-1/2 opacity-[0.05] pointer-events-none select-none hidden lg:block">
-        <Logo className="w-[800px] h-auto opacity-20" color="white" />
+      <div className="absolute top-1/2 right-[-5%] -translate-y-1/2 opacity-[0.10] pointer-events-none select-none hidden lg:block">
+        <Logo className="w-[800px] h-auto opacity-35" color="white" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10">

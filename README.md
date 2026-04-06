@@ -1,20 +1,18 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Blackstride Digital
 
-# Run and deploy your AI Studio app
+This project now runs on Next.js App Router while preserving the current site design.
 
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/f61ee37a-708d-4a16-bfb2-8299e2a1ec57
-
-## Run Locally
-
-**Prerequisites:**  Node.js
-
+## Run locally
 
 1. Install dependencies:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
+2. Start the dev server:
    `npm run dev`
+3. Open `http://localhost:3000`
+
+## Scripts
+
+- `npm run dev` starts the Next.js dev server
+- `npm run build` creates a production build
+- `npm run start` serves the production build
+- `npm run lint` runs TypeScript checks
