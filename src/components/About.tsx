@@ -39,16 +39,14 @@ export default function About() {
             className="relative group"
           >
             <div className="aspect-square bg-card border border-agency-border group-hover:border-agency-accent/40 transition-colors duration-500 relative overflow-hidden">
-              <div className="absolute inset-0 bg-white">
-                <Image
-                  src="/branding/blackstride-logo-stacked-light.png"
-                  alt="Blackstride Digital brand mark"
-                  fill
-                  loading="lazy"
-                  className="object-contain p-10 sm:p-14"
-                  sizes="(min-width: 1024px) 40vw, 100vw"
-                />
-              </div>
+              <Image
+                src="/images/360_F_235097419_oW8XQTFySkHTSvGsbRSn61VBRz5mxv1b.jpg"
+                alt="Developer working across multiple screens"
+                fill
+                loading="lazy"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="(min-width: 1024px) 40vw, 100vw"
+              />
               <div className="absolute inset-0 bg-linear-to-t from-background/70 via-transparent to-transparent"></div>
 
               <div className="absolute bottom-10 left-10 right-10">
