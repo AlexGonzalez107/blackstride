@@ -108,13 +108,12 @@ export default function FinalCTA() {
           <div className="absolute top-0 left-0 w-full h-1.5 bg-agency-accent" />
 
           <h2 className="text-4xl md:text-6xl font-bold mb-8 max-w-4xl mx-auto leading-tight tracking-tighter">
-            Ready to build a digital presence that{" "}
-            <span className="text-agency-accent">actually works?</span>
+            Ready to <span className="text-agency-accent">get started?</span>
           </h2>
 
           <p className="text-xl text-foreground/60 mb-12 max-w-2xl mx-auto">
-            Book a free 30-minute call. No pitch. Just a real conversation
-            about your business.
+            One call is all it takes. We'll walk you through exactly what we'd build, what it costs, and how fast we can
+            move. No obligation.
           </p>
 
           <div className="mx-auto max-w-4xl text-left">
@@ -240,7 +239,7 @@ export default function FinalCTA() {
                     {isSubmitting ? (
                       <>
                         <LoaderCircle className="h-5 w-5 animate-spin" />
-                        Sending…
+                        Sending...
                       </>
                     ) : (
                       "Book Your Free Call"
@@ -253,7 +252,7 @@ export default function FinalCTA() {
 
           <div className="mt-16">
             <span className="text-agency-accent font-display text-xs tracking-[0.8em] uppercase">
-              Blackstride Digital — Built to Move.
+              Blackstride Digital - Built to Move.
             </span>
           </div>
 

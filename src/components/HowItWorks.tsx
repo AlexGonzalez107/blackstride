@@ -2,20 +2,23 @@ import { motion } from 'motion/react';
 
 const steps = [
   {
-    number: "01",
-    title: "Discovery Call",
-    description: "We learn your business, goals, and what's holding your digital presence back. (30 min, no pitch)"
+    number: '01',
+    title: 'Discovery',
+    description:
+      "One call. You tell us about your business and what you need. We tell you exactly what we'd build and what it costs. 30 minutes.",
   },
   {
-    number: "02",
-    title: "Build & Launch",
-    description: "We move fast. Most projects are live within 2 weeks."
+    number: '02',
+    title: 'Build',
+    description:
+      'We get to work. Most sites are live within a week - while traditional agencies are still writing proposals.',
   },
   {
-    number: "03",
-    title: "Grow Together",
-    description: "Stay on retainer and let us handle the rest while you run your business."
-  }
+    number: '03',
+    title: 'Ongoing',
+    description:
+      'Go live and stay ahead. Our retainer clients get continuous updates, content, and performance management every month.',
+  },
 ];
 
 export default function HowItWorks() {
@@ -23,20 +26,19 @@ export default function HowItWorks() {
     <section className="py-32 bg-background">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="text-center mb-24">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
             className="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-tighter"
           >
-            Simple process. <span className="text-agency-accent">Real results.</span>
+            Simple from <span className="text-agency-accent">day one.</span>
           </motion.h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16 relative">
-          {/* Connector line for desktop */}
           <div className="hidden md:block absolute top-12 left-0 w-full h-[1px] bg-agency-border z-0"></div>
-          
+
           {steps.map((step, i) => (
             <motion.div
               key={step.title}
@@ -52,9 +54,7 @@ export default function HowItWorks() {
                 </span>
               </div>
               <h3 className="text-2xl font-bold mb-4 uppercase tracking-widest">{step.title}</h3>
-              <p className="text-foreground/60 leading-relaxed max-w-xs">
-                {step.description}
-              </p>
+              <p className="text-foreground/60 leading-relaxed max-w-xs">{step.description}</p>
             </motion.div>
           ))}
         </div>

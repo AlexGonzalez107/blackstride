@@ -1,6 +1,6 @@
-import Image from "next/image";
-import { motion } from "motion/react";
-import { Logo } from "./Logo";
+import Image from 'next/image';
+import { motion } from 'motion/react';
+import { Logo } from './Logo';
 
 export default function About() {
   return (
@@ -17,18 +17,18 @@ export default function About() {
             </h2>
             <div className="space-y-6 text-lg text-foreground/70 leading-relaxed">
               <p>
-                Blackstride Digital is built differently. We run an AI-powered delivery stack — which means faster builds, lower overhead, and results that punch well above our price point.
+                Most agencies make getting online harder than it needs to be. Long timelines, vague proposals, and invoices that
+                don't match the results.
               </p>
               <div className="flex items-center gap-4 py-4">
                 <Logo className="w-12 h-12 opacity-30" color="white" />
                 <div className="h-[1px] flex-grow bg-agency-border/30"></div>
               </div>
               <p>
-                We're not a 10-person agency with 10x the overhead. We're a precision operation that moves fast and stays accountable.
+                Blackstride is built differently. Lean, fast, and accountable - because your first impression online deserves to
+                be a good one.
               </p>
-              <p className="font-display text-agency-accent tracking-widest uppercase text-sm">
-                Built to Move.
-              </p>
+              <p className="font-display text-agency-accent tracking-widest uppercase text-sm">Built to Move.</p>
             </div>
           </motion.div>
 
@@ -39,28 +39,31 @@ export default function About() {
             className="relative group"
           >
             <div className="aspect-square bg-card border border-agency-border group-hover:border-agency-accent/40 transition-colors duration-500 relative overflow-hidden">
-               <div className="absolute inset-0 bg-white">
-                 <Image
+              <div className="absolute inset-0 bg-white">
+                <Image
                   src="/branding/blackstride-logo-stacked-light.png"
                   alt="Blackstride Digital brand mark"
                   fill
                   loading="lazy"
                   className="object-contain p-10 sm:p-14"
                   sizes="(min-width: 1024px) 40vw, 100vw"
-                 />
-               </div>
-               <div className="absolute inset-0 bg-linear-to-t from-background/70 via-transparent to-transparent"></div>
-               
-               <div className="absolute bottom-10 left-10 right-10">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="h-[1px] flex-grow bg-agency-accent/30"></div>
-                    <span className="text-agency-accent font-display text-[10px] tracking-[0.4em] uppercase">Precision Operation</span>
-                  </div>
-                  <p className="text-foreground font-display text-2xl tracking-tighter uppercase font-bold">Outcome-Obsessed Delivery</p>
-               </div>
+                />
+              </div>
+              <div className="absolute inset-0 bg-linear-to-t from-background/70 via-transparent to-transparent"></div>
+
+              <div className="absolute bottom-10 left-10 right-10">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="h-[1px] flex-grow bg-agency-accent/30"></div>
+                  <span className="text-agency-accent font-display text-[10px] tracking-[0.4em] uppercase">
+                    Precision Operation
+                  </span>
+                </div>
+                <p className="text-foreground font-display text-2xl tracking-tighter uppercase font-bold">
+                  Outcome-Obsessed Delivery
+                </p>
+              </div>
             </div>
-            
-            {/* Decorative elements */}
+
             <div className="absolute -top-4 -right-4 w-24 h-24 border-t-2 border-r-2 border-agency-accent/30"></div>
             <div className="absolute -bottom-4 -left-4 w-24 h-24 border-b-2 border-l-2 border-agency-accent/30"></div>
           </motion.div>

@@ -2,16 +2,16 @@ import { motion } from 'motion/react';
 
 export default function CredibilityBar() {
   const items = [
-    "BUILT TO MOVE.",
-    "20+ SITES LAUNCHED",
-    "3-DAY AVERAGE DELIVERY",
-    "$0 WASTED ON AGENCIES THAT GHOST YOU",
-    "100% SMALL BUSINESS FOCUSED",
-    "BUILT TO MOVE.",
-    "20+ SITES LAUNCHED",
-    "3-DAY AVERAGE DELIVERY",
-    "$0 WASTED ON AGENCIES THAT GHOST YOU",
-    "100% SMALL BUSINESS FOCUSED"
+    'BUILT TO MOVE.',
+    'YOUR FIRST SITE, DONE RIGHT.',
+    '1-WEEK DELIVERY',
+    'MONTH-TO-MONTH. NO LOCK-IN.',
+    '100% SMALL BUSINESS FOCUSED',
+    'BUILT TO MOVE.',
+    'YOUR FIRST SITE, DONE RIGHT.',
+    '1-WEEK DELIVERY',
+    'MONTH-TO-MONTH. NO LOCK-IN.',
+    '100% SMALL BUSINESS FOCUSED',
   ];
 
   return (
@@ -29,4 +29,3 @@ export default function CredibilityBar() {
     </div>
   );
 }
-
