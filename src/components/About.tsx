@@ -44,6 +44,7 @@ export default function About() {
                   src="/branding/blackstride-logo-stacked-light.png"
                   alt="Blackstride Digital brand mark"
                   fill
+                  loading="lazy"
                   className="object-contain p-10 sm:p-14"
                   sizes="(min-width: 1024px) 40vw, 100vw"
                  />
