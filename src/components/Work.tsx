@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
+import Image from "next/image";
 
 const projects = [
   {
@@ -62,9 +63,12 @@ export default function Work() {
             className="lg:col-span-7 group cursor-pointer"
           >
             <div className="aspect-video overflow-hidden glass-card mb-6 relative border-t-2 border-transparent group-hover:border-agency-accent transition-all duration-500">
-              <img 
-                src={projects[0].image} 
+              <Image
+                src={projects[0].image}
                 alt={projects[0].title}
+                fill
+                loading="lazy"
+                sizes="(min-width: 1024px) 58vw, 100vw"
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 opacity-60 group-hover:opacity-100"
                 referrerPolicy="no-referrer"
               />
@@ -88,9 +92,12 @@ export default function Work() {
                 className="group cursor-pointer"
               >
                 <div className="aspect-video overflow-hidden glass-card mb-6 relative">
-                  <img 
-                    src={project.image} 
+                  <Image
+                    src={project.image}
                     alt={project.title}
+                    fill
+                    loading="lazy"
+                    sizes="(min-width: 1024px) 34vw, 100vw"
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 opacity-60 group-hover:opacity-100"
                     referrerPolicy="no-referrer"
                   />
@@ -114,9 +121,12 @@ export default function Work() {
                   className="group cursor-pointer"
                 >
                   <div className="aspect-square overflow-hidden glass-card mb-6 relative">
-                    <img 
-                      src={project.image} 
+                    <Image
+                      src={project.image}
                       alt={project.title}
+                      fill
+                      loading="lazy"
+                      sizes="(min-width: 1024px) 17vw, 50vw"
                       className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 opacity-60 group-hover:opacity-100"
                       referrerPolicy="no-referrer"
                     />

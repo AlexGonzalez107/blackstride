@@ -1,5 +1,6 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import CredibilityBar from "./components/CredibilityBar";
@@ -11,7 +12,10 @@ import Pricing from "./components/Pricing";
 import About from "./components/About";
 import FinalCTA from "./components/FinalCTA";
 import Footer from "./components/Footer";
-import CustomCursor from "./components/CustomCursor";
+
+const CustomCursor = dynamic(() => import("./components/CustomCursor"), {
+  ssr: false,
+});
 
 export default function App() {
   return (

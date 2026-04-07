@@ -52,24 +52,39 @@ export async function POST(request: Request) {
     );
   }
 
-  const response = await fetch(
-    `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formId}`,
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 8000);
+  let response: Response;
+
+  try {
+    response = await fetch(
+      `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formId}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          fields: [
+            { name: "firstname", value: firstName },
+            { name: "lastname", value: lastName },
+            { name: "email", value: email },
+            { name: "phone", value: phone },
+            { name: "message", value: message },
+          ],
+        }),
+        signal: controller.signal,
       },
-      body: JSON.stringify({
-        fields: [
-          { name: "firstname", value: firstName },
-          { name: "lastname", value: lastName },
-          { name: "email", value: email },
-          { name: "phone", value: phone },
-          { name: "message", value: message },
-        ],
-      }),
-    },
-  );
+    );
+  } catch (error) {
+    const message =
+      error instanceof Error && error.name === "AbortError"
+        ? "Contact request timed out. Please try again."
+        : "Unable to reach HubSpot right now. Please try again.";
+    return NextResponse.json({ error: message }, { status: 502 });
+  } finally {
+    clearTimeout(timeout);
+  }
 
   if (!response.ok) {
     let errorMessage = "HubSpot submission failed.";
